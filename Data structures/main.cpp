@@ -1,7 +1,9 @@
 #include "MyVector.cpp"
-#include "stdio.h"
+#include <iostream>
+
+using namespace std;
+
 int main(){
     MyVector vector (10);
-    printf("lmao");
     return 0;
 }

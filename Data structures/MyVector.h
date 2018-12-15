@@ -3,12 +3,17 @@
 #define MYVECTOR_H
 class MyVector {
   private:
-    int size, capacity;
-    int* array;
+    int _size, _capacity;
+    int* _array;
     void assignMemory(int);
 
   public:
+    MyVector();
     MyVector(int);
-    void push_back(int);    
+    int size();
+    int capacity();
+    void push_back(int);
+    int getElementAt(int index);    
+
 };
 #endif
