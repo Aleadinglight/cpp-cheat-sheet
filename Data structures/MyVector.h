@@ -12,6 +12,7 @@ class MyVector {
     MyVector(int);
     int size();
     int capacity();
+    bool is_empty();
     void push_back(int);
     int getElementAt(int index);    
 
