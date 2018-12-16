@@ -17,3 +17,5 @@ a = NULL;     // Clear a to prevent using invalid memory reference.
 ```
 
 2. Implement of a Vector (mutable array with automatic resizing):
+    - Constructor auto assign dynamic memory. Starting from 16 as default, use power of 2 as capacity.
+    - Deconstructor to delete pointer array, prevent memory leak.
