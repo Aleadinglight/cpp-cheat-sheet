@@ -4,9 +4,7 @@
 
 ### [Data Structures](../master/Data%20structures)
 
-<details>
-- <summary> ### Array </summary>
-    1. Dynamic array
+1. Dynamic array
 
     ```c++
     int* a = NULL;   // Pointer to int, initialize to nothing.
@@ -21,18 +19,17 @@
     a = NULL;     // Clear a to prevent using invalid memory reference.
     ```
 
-    2. [Implement of a Vector](../master/Data%20structures/MyVector.cpp) (mutable array with automatic resizing):
-        - Constructor auto assign dynamic memory. Starting from 16 as default, use power of 2 as capacity.
-        - Deconstructor to delete pointer array, prevent memory leak.
-        - size(): Number of items inside.
-        - capacity(): Capacity of the array inside.
-        - getElementAt(): Return element at given index.
-        - delete(index): Delete item at index.
-        - assignMemory(): Private function used to manage memory between states of the Vector.
-</details>
+2. [Implement of a Vector](../master/Data%20structures/MyVector.cpp) (mutable array with automatic resizing):
+    - Constructor auto assign dynamic memory. Starting from 16 as default, use power of 2 as capacity.
+    - Deconstructor to delete pointer array, prevent memory leak.
+    - size(): Number of items inside.
+    - capacity(): Capacity of the array inside.
+    - getElementAt(): Return element at given index.
+    - delete(index): Delete item at index.
+    - assignMemory(): Private function used to manage memory between states of the Vector.
+
 
 ## Articles
 
 1. [Big-O cheat sheet.](http://bigocheatsheet.com/)
 2. [TopCoder tutorial.](https://www.topcoder.com/community/competitive-programming/tutorials/)
-3. 
