@@ -5,13 +5,14 @@ MyVector::MyVector() {
     MyVector(16);
 }
 
-MyVector::MyVector(int capacity) {
+MyVector::MyVector(int size) {
     // Capacity start from 2^4 elements
-    if (capacity<16){
-        _size = capacity;
-        capacity = 16;
+    int capacity = 16;
+    while (capacity<size){
+        capacity*=2;
     }
     assignMemory(capacity);
+    _size = ca
 }
 
 // Free memory
@@ -24,11 +25,15 @@ void MyVector::assignMemory(int capacity){
     this->_capacity = capacity;
     // Create a new dynamic array
     int* _newArray = new int[capacity]; 
-    std::cout<<_newArray;
-    std::cout<<_array;
+    std::cout<<_newArray<<"\n";
+    std::cout<<_array<<"\n";
+
     // Copy the old elements
-    for (int i=0; i<_size; i++){
-        *(_newArray+i) = *(_array+i);
+    if (_size>0){
+        for (int i=0; i<_size; i++){
+            std::cout<<_size;
+            *(_newArray+i) = *(_array+i);
+        }
     }
     std::cout<<_size;
     // Assign for the others elements
