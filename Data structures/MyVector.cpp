@@ -12,7 +12,7 @@ MyVector::MyVector(int size) {
         capacity*=2;
     }
     assignMemory(capacity);
-    _size = ca
+    _size = size;
 }
 
 // Free memory
@@ -25,32 +25,27 @@ void MyVector::assignMemory(int capacity){
     this->_capacity = capacity;
     // Create a new dynamic array
     int* _newArray = new int[capacity]; 
-    std::cout<<_newArray<<"\n";
-    std::cout<<_array<<"\n";
-
     // Copy the old elements
     if (_size>0){
         for (int i=0; i<_size; i++){
-            std::cout<<_size;
             *(_newArray+i) = *(_array+i);
         }
     }
-    std::cout<<_size;
     // Assign for the others elements
     for (int i=_size; i<capacity; i++){
         *(_newArray+i) = 0;
     }
-    std::cout<<_array;
     // Free memory of the old array
     delete [] _array;
     // Assign the new array to this->_array
     this->_array = _newArray;
-    
+    // Set new array pointer to NULL
+    _newArray = NULL;
 }
 
 void MyVector::push_back(int input){
     // If the size exceed the capacity
-    if (_size>_capacity){
+    if (_size+1>_capacity){
         // Double the capacity
         _capacity*=2;
         assignMemory(_capacity);
