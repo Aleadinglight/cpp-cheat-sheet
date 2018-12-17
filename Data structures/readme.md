@@ -16,6 +16,11 @@ delete [] a;  // When done, free memory pointed to by a.
 a = NULL;     // Clear a to prevent using invalid memory reference.
 ```
 
-2. Implement of a Vector (mutable array with automatic resizing):
+2. [Implement of a Vector](../master/Data%20structures/MyVector.cpp) (mutable array with automatic resizing):
     - Constructor auto assign dynamic memory. Starting from 16 as default, use power of 2 as capacity.
     - Deconstructor to delete pointer array, prevent memory leak.
+    - size(): Number of items inside.
+    - capacity(): Capacity of the array inside.
+    - getElementAt(): Return element at given index.
+    - delete(index): Delete item at index.
+    - assignMemory(): Private function used to manage memory between states of the Vector.
