@@ -10,6 +10,7 @@ class MyVector {
   public:
     MyVector();
     MyVector(int);
+    ~MyVector();
     int size();
     int capacity();
     bool is_empty();

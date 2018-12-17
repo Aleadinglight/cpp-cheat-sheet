@@ -14,13 +14,33 @@ MyVector::MyVector(int capacity) {
     assignMemory(capacity);
 }
 
+// Free memory
+MyVector::~MyVector(){
+    delete [] _array;
+    _array = NULL;
+}
+
 void MyVector::assignMemory(int capacity){
     this->_capacity = capacity;
     // Create a new dynamic array
-    _array = new int[capacity]; 
-    for (int i=0; i<capacity; i++){
-        *(_array+i) = 0;
+    int* _newArray = new int[capacity]; 
+    std::cout<<_newArray;
+    std::cout<<_array;
+    // Copy the old elements
+    for (int i=0; i<_size; i++){
+        *(_newArray+i) = *(_array+i);
     }
+    std::cout<<_size;
+    // Assign for the others elements
+    for (int i=_size; i<capacity; i++){
+        *(_newArray+i) = 0;
+    }
+    std::cout<<_array;
+    // Free memory of the old array
+    delete [] _array;
+    // Assign the new array to this->_array
+    this->_array = _newArray;
+    
 }
 
 void MyVector::push_back(int input){

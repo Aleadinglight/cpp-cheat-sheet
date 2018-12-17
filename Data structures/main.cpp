@@ -10,8 +10,8 @@ void testInput(MyVector newVector){
     }
     cout<<"New capacity: "<<newVector.capacity()<<"\n";
     cout<<"New size: "<<newVector.size()<<"\n";
-    cout<<"a[6]="<<newVector.getElementAt(6)<<"\n";
-    cout<<"Elements inside vector: (1->5) \n";
+    cout<<"newVector[6]="<<newVector.getElementAt(6)<<"\n";
+    cout<<"Elements inside vector: (10 empty init + elements from 1->5) \n";
     for (int i=0; i<newVector.size(); i++){
         cout<<newVector.getElementAt(i)<<" ";
     }
