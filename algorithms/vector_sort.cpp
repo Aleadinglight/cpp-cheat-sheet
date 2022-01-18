@@ -1,15 +1,11 @@
-# CPP Cheat Sheet
+#include <iostream>
+#include <vector>
+#include <algorithm>
 
+using namespace std;
 
-## Table of Contents
-
-## Data Structures
-
-## Algorithms
-
-### Sort
-- Sort a vector
-```cpp
+int main()
+{
     vector<int> nums{1,3,4,5,6};
     
     // Sort ascending
@@ -23,9 +19,5 @@
     for (int i=0; i<nums.size(); i++) {
         cout<<nums[i]<<" ";
     }
-```
-
-## Articles
-
-1. [Big-O cheat sheet.](http://bigocheatsheet.com/)
-2. [TopCoder tutorial.](https://www.topcoder.com/community/competitive-programming/tutorials/)
+    return 0;
+}
