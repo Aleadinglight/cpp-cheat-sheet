@@ -5,6 +5,26 @@
 
 ## Data Structures
 
+### String
+- Return a substring using `substring(start_position, length)`
+```cpp
+    // (quoting Alfred N. Whitehead)
+    std::string str="We think in generalities, but we live in details.";
+    std::string str2 = str.substr(3,5); // "think"
+```
+
+- Find a substring using `find(sub_string)`
+```cpp
+    std::size_t pos = str.find("live");   
+```
+
+### Set 
+- Inititalize a `set` from a `vector`
+```cpp
+    vector<string> words{"one", "two"};
+    set<string> words_set(words.begin(), words.end());
+```
+
 ### Map
 
 - Using `unordered_map`
